@@ -1,4 +1,5 @@
 import StringSchema from './StringSchema.js';
+import ArraySchema from './ArraySchema.js';
 
 export default class Validator {
   string() {
@@ -6,4 +7,8 @@ export default class Validator {
     return new StringSchema([validator]);
   }
 
+  array() {
+    const validator = (value) => Array.isArray(value);
+    return new ArraySchema([validator]);
+  }
 }
