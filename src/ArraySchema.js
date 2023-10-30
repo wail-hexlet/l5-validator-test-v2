@@ -27,5 +27,6 @@ export default class ArraySchema {
     }
 
     return new ArraySchema([...this.validators, validator]);
-  }  
+  } 
+   
 }
